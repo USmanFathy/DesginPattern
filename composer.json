@@ -1,0 +1,17 @@
+{
+  "description": "design pattern practice",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "usman ahmed",
+      "email": "usmanahmedfathy@gmail.com"
+    }
+
+  ],
+  "autoload": {
+    "psr-4": {
+      "DesignPattern\\" : "Src/"
+    }
+  }
+}
