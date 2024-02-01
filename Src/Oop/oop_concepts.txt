@@ -1,0 +1,9 @@
+oop concepts :-
+
+Abstractions : concept of hiding the implementation and un-necessary details or data from user,the process of hiding complexity and focusing on what functionalities are available to use.
+
+Encapsulation : concept of wrapping data and code together as a single unit
+
+Inheritance : concept in which one object inherits all the properties and behaviors a parent object.
+
+Polymorphism : concept by which we can perform a single action in different ways ,Polymorphism 2 Geek words : poly and morphs , poly means many and morphs means forms ,so Polymorphism means many forms
