@@ -24,6 +24,10 @@ abstract class Car
      * @var bool
      */
     protected bool $turnOn = false;
+    /**
+     * @var CarDashboard
+     */
+    private CarDashboard $carDashboard;
 
     /**
      * @param int $speed
@@ -46,4 +50,16 @@ abstract class Car
     public abstract function accelerate(int $speed) :bool;
     public abstract function park():bool;
 
+    public function installDashboard(CarDashboard $carDashboard) :void
+    {
+        $this->carDashboard = $carDashboard;
+    }
+
+    public  function carInfo():string
+    {
+        if ($this->carDashboard){
+            return  "the speed is {$this->speed}\n more info ...\n".$this->carDashboard->readDashboard();
+        }
+        return "the speed is {$this->speed}\nThis car does not has a dashboard";
+    }
 }
