@@ -1,13 +1,11 @@
 <?php
 require_once __dir__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
-use DesignPattern\Oop\Bmw;
-use DesignPattern\Oop\Toyota;
-use DesignPattern\Oop\CarDashboard;
+use DesignPattern\Oop\HttpClient;
 
-$bmw = new Bmw(200,4,"Front","red");
-$toyota = new Toyota(350,4,"Back","white");
+$http = new HttpClient('https://www.hi.com',15);
 
-$toyota->installDashboard(new CarDashboard(4,50,700));
-
-echo $toyota->carInfo();
+echo $http->connect()."<br>" ;
+echo $http->call('/test') ."<br>";
+echo $http->terminate() ."<br>";
+echo $http->welcomeAfterConnect();
