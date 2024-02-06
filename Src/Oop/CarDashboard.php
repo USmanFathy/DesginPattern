@@ -62,9 +62,9 @@ class CarDashboard
 
     public function readDashboard():string
     {
-        return "Showing analysis : \n 
-        Fuel:{$this->getFuelLevel()} \n
-         Oil:{$this->getOilLevel()}\n
+        return "Showing analysis : <br>
+        Fuel:{$this->getFuelLevel()} <br>
+         Oil:{$this->getOilLevel()}<br>
          Air Pressure:{$this->getAirPressure()}";
     }
 

@@ -1,11 +1,10 @@
 <?php
 require_once __dir__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
-use DesignPattern\Oop\HttpClient;
+use DesignPattern\Oop\Employee;
+use DesignPattern\Oop\OrganizationSalary as Salary;
 
-$http = new HttpClient('https://www.hi.com',15);
+$salary   = new Salary(6500,0.2,30,75,30,0.15);
+$employee = new Employee('usman',25,'dameitta',$salary);
 
-echo $http->connect()."<br>" ;
-echo $http->call('/test') ."<br>";
-echo $http->terminate() ."<br>";
-echo $http->welcomeAfterConnect();
+echo $employee->getSalary()->calculateSalary();
