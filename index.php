@@ -1,10 +1,17 @@
 <?php
 require_once __dir__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
-use DesignPattern\Oop\Employee;
-use DesignPattern\Oop\OrganizationSalary as Salary;
+use DesignPattern\Oop\RelationShips\Association\Student;
+use DesignPattern\Oop\RelationShips\Association\Teacher;
+//use DesignPattern\Oop\RelationShips\Association\Printer\StringPrinter;
 
-$salary   = new Salary(6500,0.2,30,75,30,0.15);
-$employee = new Employee('usman',25,'dameitta',$salary);
+$teacher = new Teacher("usman ahmed");
 
-echo $employee->getSalary()->calculateSalary();
+//echo $teacher->welcome(new StringPrinter());
+$student = new Student("amira");
+
+
+$student->assignATempTeacher($teacher);
+$student->doHomeWork();
+$teacher->evaluateHomeWork($student);
+var_dump($student->getHomeWorkRate(),$teacher->evaluateHomeWork($student),$student->getHomeWork());

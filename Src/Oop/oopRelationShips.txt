@@ -1,0 +1,3 @@
+
+
+Association : defines a relationship between classes of objects tha allows one object instance to casue another to perform an action that allows.
