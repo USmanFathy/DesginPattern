@@ -1,19 +1,11 @@
 <?php
 require_once __dir__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
-use DesignPattern\Oop\RelationShips\Aggregation\Project;
-use DesignPattern\Oop\RelationShips\Aggregation\Developer;
+use DesignPattern\Oop\RelationShips\Composition\House;
+use DesignPattern\Oop\RelationShips\Composition\Room;
 
-$usman = new Developer("usman ahmed");
-$usman1 = new Developer("usman ahmed");
-$usman2 = new Developer("usman ahmed");
+$room1 = new Room(20,'white');
+$room2 = new Room(30,'lightGray');
+$room3 = new Room(25,'lightBlue');
 
-
-$project = new Project(
-    'x Project',
-    new DateTime('now'),
-    [$usman,$usman1,$usman2]);
-
-$project->setDeadline(new DateInterval('P1M'));
-
-var_dump($project->showInfo());
+$house = new House([$room3,$room1,$room2]);
