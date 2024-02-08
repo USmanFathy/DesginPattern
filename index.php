@@ -1,17 +1,19 @@
 <?php
 require_once __dir__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
-use DesignPattern\Oop\RelationShips\Association\Student;
-use DesignPattern\Oop\RelationShips\Association\Teacher;
-//use DesignPattern\Oop\RelationShips\Association\Printer\StringPrinter;
+use DesignPattern\Oop\RelationShips\Aggregation\Project;
+use DesignPattern\Oop\RelationShips\Aggregation\Developer;
 
-$teacher = new Teacher("usman ahmed");
-
-//echo $teacher->welcome(new StringPrinter());
-$student = new Student("amira");
+$usman = new Developer("usman ahmed");
+$usman1 = new Developer("usman ahmed");
+$usman2 = new Developer("usman ahmed");
 
 
-$student->assignATempTeacher($teacher);
-$student->doHomeWork();
-$teacher->evaluateHomeWork($student);
-var_dump($student->getHomeWorkRate(),$teacher->evaluateHomeWork($student),$student->getHomeWork());
+$project = new Project(
+    'x Project',
+    new DateTime('now'),
+    [$usman,$usman1,$usman2]);
+
+$project->setDeadline(new DateInterval('P1M'));
+
+var_dump($project->showInfo());

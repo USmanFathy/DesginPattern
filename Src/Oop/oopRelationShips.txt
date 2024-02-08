@@ -1,3 +1,5 @@
 
 
 Association : defines a relationship between classes of objects tha allows one object instance to casue another to perform an action that allows.
+Aggregation : is aweak type of association that represents the relationship between an owner object and its aggregated collection of objects away that does not affect the cycle of the parts object if the owner is destroyed.
+composition : is astrong type of association and its also called death relationship it represent an owner object that own another object as part of it this type of relationship controls the life cycle of the owned object in a way that if the owner is destroyed then the owned object is destroyed too.
