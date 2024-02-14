@@ -1,11 +1,11 @@
 <?php
 require_once __dir__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
-use DesignPattern\Oop\RelationShips\Composition\House;
-use DesignPattern\Oop\RelationShips\Composition\Room;
 
-$room1 = new Room(20,'white');
-$room2 = new Room(30,'lightGray');
-$room3 = new Room(25,'lightBlue');
+use DesignPattern\DesignPatterns\CreationalPatterns\FactoryMethod\DialogExample\Dialogs\MobileDialog;
+use DesignPattern\DesignPatterns\CreationalPatterns\FactoryMethod\DialogExample\Dialogs\SystemDialog;
+use DesignPattern\DesignPatterns\CreationalPatterns\FactoryMethod\DialogExample\Dialogs\WebDialog;
 
-$house = new House([$room3,$room1,$room2]);
+echo (new WebDialog())->renderButtonData();
+echo (new MobileDialog())->renderButtonData();
+echo (new SystemDialog())->renderButtonData();
