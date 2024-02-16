@@ -3,7 +3,6 @@
 namespace DesignPattern\DesignPatterns\CreationalPatterns\Builder\Builders;
 
 use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Builder;
-use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\CoolingSystem;
 use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\KeyBoard;
 use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\Monitor;
 use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\MotherBoard\MainParts\CPU;
@@ -17,9 +16,7 @@ use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\MotherBoard
 use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\MotherBoard\Sockets\USB;
 use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\Mouse;
 use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\Types\Computer;
-use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\Types\ComputerCs;
-use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\Types\Interfaces\ComputerSimple;
-use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\UPS;
+use DesignPattern\DesignPatterns\CreationalPatterns\Builder\Computer\Types\ComputerSimple;
 
 class ComputerSimpleBuilder extends Builder
 {
