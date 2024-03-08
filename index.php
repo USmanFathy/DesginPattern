@@ -61,8 +61,13 @@ require_once __dir__.DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.
 //$ahmed->getProfileData()->setName('ahmed');
 //var_dump($ahmed);
 
-use DesignPattern\DesignPatterns\CreationalPatterns\AbstractFactory\FormAbstractFactory\MobileForm\MobileFormFactory;
-use DesignPattern\DesignPatterns\CreationalPatterns\AbstractFactory\FormAbstractFactory\GUIClient;
-
-$form = new GUIClient(new MobileFormFactory());
-echo  $form->createForm();
+//use DesignPattern\DesignPatterns\CreationalPatterns\AbstractFactory\FormAbstractFactory\MobileForm\MobileFormFactory;
+//use DesignPattern\DesignPatterns\CreationalPatterns\AbstractFactory\FormAbstractFactory\GUIClient;
+//
+//$form = new GUIClient(new MobileFormFactory());
+//echo  $form->createForm();
+use DesignPattern\DesignPatterns\CreationalPatterns\Singleton\AppSettings;
+$setting = AppSettings::getInstance();
+var_dump($setting);
+$setting2 = AppSettings::getInstance();
+var_dump($setting2);
